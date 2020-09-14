@@ -1,6 +1,7 @@
 ---
-id: DataDrivenContentHandle
+id: version-0.4.0-DataDrivenContentHandle
 title: DataDrivenContentHandle
+original_id: DataDrivenContentHandle
 ---
 
 A `DataDrivenContentHandle` is used to dispatch messages to a data-driven content object. It can be obtained by

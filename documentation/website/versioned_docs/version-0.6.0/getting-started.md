@@ -1,6 +1,7 @@
 ---
-id: getting-started
+id: version-0.6.0-getting-started
 title: Getting started
+original_id: getting-started
 ---
 
 The SAS Visual Analytics SDK enables you to use the power of SAS Visual Analytics in your own websites and HTML applications.
@@ -31,11 +32,11 @@ The library can then be loaded out of the deployed assets folder using a `script
 
 Accessing the `va-report-components` library from a CDN is easy. It does not require installation or
 hosting of the library code and assets. There are several public options for accessing NPM content through a CDN, such
-as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/">jsDelivr</a>. Here is an example of loading the 0.8.* version of `va-report-components` from UNPKG
+as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/">jsDelivr</a>. Here is an example of loading the 0.6.* version of `va-report-components` from UNPKG
 using an HTML `script` tag. When used in production, the version should be pinned to the full `major.minor.patch` semantic version.
 
 ```html
-<script async src="https://unpkg.com/@sassoftware/va-report-components@0.8/dist/umd/va-report-components.js"></script>
+<script async src="https://unpkg.com/@sassoftware/va-report-components@0.6/dist/umd/va-report-components.js"></script>
 ```
 
 ## SAS Viya setup
@@ -50,11 +51,11 @@ needed in order to connect to SAS Viya from the domain that is hosting your HTML
 
 ### Cross-Site Request Forgery
 
-SAS Viya servers protect against Cross-Site Request Forgery (CSRF) by blocking requests where the HTTP Referer Header does not match the URI of the requested resource or a URI whitelist. The domain of the site using the SAS Visual Analytics SDK must be whitelisted in the CSRF configuration.  See <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calconfig&docsetTarget=n08030sasconfiguration0admin.htm#n0nf0wwa3p7mjhn11926x4k9gl72">SAS Help Center</a> for more information.
+SAS Viya servers protect against Cross-Site Request Forgery (CSRF) by blocking requests where the HTTP Referer Header does not match the URI of the requested resource or a URI whitelist. CSRF checks are only made on authenticated sessions, so this is not applicable if using `authenticationType="guest"`. If using `authenticationType="credentials"`, the domain of the site using the SAS Visual Analytics SDK must be whitelisted in the CSRF configuration.  See <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calconfig&docsetTarget=n08030sasconfiguration0admin.htm#n0nf0wwa3p7mjhn11926x4k9gl72">SAS Help Center</a> for more information.
 
 ### Cross-Site Cookies
 
-The SAS Visual Analytics SDK requires the use of cookies to handle authentication with the SAS Viya Logon service. Browsers require that the response setting the cookie explicitly enable cross-site cookies by setting `samesite=none` on the response header. This is not the default for SAS Viya and must be configured in order to support the SDK. The `sameSite` configuration option in the `sas.commons.web.security.cookies` definition should be set to `None`, and should be applied globally to all services. See <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calconfig&docsetTarget=n08030sasconfiguration0admin.htm#p18obwsyh87dc7n18hvyxa1t8zjs">SAS Help Center</a> for more information.
+The SAS Visual Analytics SDK requires the use of cookies to handle authentication with the SAS Viya Logon service. Browsers require that the response setting the cookie explicitly enable cross-site cookies by setting `samesite=none` on the response header. This is not the default for SAS Viya and must be configured in order to support `authenticationType="credentials"` in the SDK. The `sameSite` configuration option in the `sas.commons.web.security.cookies` definition should be set to `None`, and should be applied globally to all services. See <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calconfig&docsetTarget=n08030sasconfiguration0admin.htm#p18obwsyh87dc7n18hvyxa1t8zjs">SAS Help Center</a> for more information.
 
 ### Allow guest access
 
@@ -102,4 +103,4 @@ For a complete list of options, see the documentation for [`SASReportElement`](a
 ## See our examples
 
 <a target="_blank" href="https://github.com/sassoftware/visual-analytics-sdk/tree/master/examples">Our examples</a> demonstrate a few different
-ways to start using the SAS Visual Analytics SDK in your HTML application.
+ways to start using the Visual Analytics SDK in your HTML application.

@@ -1,6 +1,7 @@
 ---
-id: SASReportPageElement
+id: version-0.4.0-SASReportPageElement
 title: SASReportPageElement
+original_id: SASReportPageElement
 ---
 
 `SASReportPageElement` is a custom HTML element that renders a report page. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
@@ -45,12 +46,6 @@ Specify the name of the report page that you want to display. Either `pageName` 
 ### `pageIndex: number`
 
 Specify the index of the report page that you want to display. `0` is the first page. Either `pageName` or `pageIndex` can be used, but not both.
-
-## Properties
-
-### `menuItemProvider: MenuItemProvider`
-
-A [`MenuItemProvider`](MenuItemProvider.md) function that generates custom menu content for this element.
 
 ## Methods
 

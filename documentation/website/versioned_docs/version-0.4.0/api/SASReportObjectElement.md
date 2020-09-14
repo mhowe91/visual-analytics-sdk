@@ -1,6 +1,7 @@
 ---
-id: SASReportObjectElement
+id: version-0.4.0-SASReportObjectElement
 title: SASReportObjectElement
+original_id: SASReportObjectElement
 ---
 
 `SASReportObjectElement` is a custom HTML element that renders a report object. This could be a single object or a
@@ -42,12 +43,6 @@ Specify the report URI.
 ### `objectName: string`
 
 Specify the name of the object from the report to display.
-
-## Properties
-
-### `menuItemProvider: MenuItemProvider`
-
-A [`MenuItemProvider`](MenuItemProvider.md) function that generates custom menu content for this element.
 
 ## Methods
 

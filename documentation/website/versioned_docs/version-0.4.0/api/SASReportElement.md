@@ -1,6 +1,7 @@
 ---
-id: SASReportElement
+id: version-0.4.0-SASReportElement
 title: SASReportElement
+original_id: SASReportElement
 ---
 
 `SASReportElement` is a custom HTML element that renders an entire report. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
@@ -45,12 +46,6 @@ Indicate whether page navigation tabs ought to be hidden. `false` provides an ap
 than one section.
 
 default value: `'auto'`
-
-## Properties
-
-### `menuItemProvider: MenuItemProvider`
-
-A [`MenuItemProvider`](MenuItemProvider.md) function that generates custom menu content for this element.
 
 ## Methods
 

@@ -1,6 +1,7 @@
 ---
-id: data-driven-content
+id: version-0.4.0-data-driven-content
 title: Data-Driven Content
+original_id: data-driven-content
 ---
 
 The data-driven content object is a feature in SAS Visual Analytics which allows you to embed your own web content into
